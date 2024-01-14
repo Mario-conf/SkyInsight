@@ -11,7 +11,7 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`)
         .then(response => response.json()).then(json => {
             if (json.cod === '404') {
                 container.style.height = '400px';
